@@ -9,6 +9,8 @@ Atentie la linkuri sa fie cele care trebuie:
 
 Clasa WebServiceConfig suprascrie definitia WSDL ca sa ii dati voi url unde se va face cererea si catre ce namespace.
 
+---
+
 N-am mai facut alt ss, da cand faceti cererea in POSTMAN, la headers sa mai adaugati:
 
 Content-Type: text/xml !!
@@ -22,6 +24,7 @@ Cache-Control: no-cache
 
 Multe clase nu-si au rostul, deci nu cred ca are rost sa le mai scrieti. Am incercat sa fac prostia aia de env-fault..
 
+---
 
 Primul pas ar trebuie sa fie sa creati elementele din xsd. (La mine se cheama login.xsd)
 

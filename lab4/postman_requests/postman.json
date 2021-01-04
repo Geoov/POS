@@ -1,0 +1,824 @@
+{
+	"info": {
+		"_postman_id": "8dae49c1-720e-4c1f-b673-e9487ba0065a",
+		"name": "POS_4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "/api/library/login(manager)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"george.vrinceanu@staff.tuiasi.ro\",\n    \"password\": \"test_pss\"\n}\n"
+						},
+						"url": {
+							"raw": "localhost:5002/api/library/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/login(editor)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"dummy.dumb@student.tuiasi.ro\",\n    \"password\": \"sadsad\"\n}\n"
+						},
+						"url": {
+							"raw": "localhost:5002/api/library/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/login(author)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test.author@student.tuiasi.ro\",\n    \"password\": \"narc\"\n}\n"
+						},
+						"url": {
+							"raw": "localhost:5002/api/library/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/library/shutdown",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n"
+						},
+						"url": {
+							"raw": "localhost:5002/api/library/shutdown",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"shutdown"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "manager requests",
+			"item": [
+				{
+					"name": "/api/library/users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"first_name\": \"teest\", \"last_name\": \"test_2\",\"password\": \"test_pss\", \"email\": \"teest\", \"telephone\": \"4534543\", \"req_role\": 3}"
+						},
+						"url": {
+							"raw": "localhost:5002/api/library/users",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5002/api/library/users",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/users?requested_role=1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5002/api/library/users?requested_role=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"users"
+							],
+							"query": [
+								{
+									"key": "requested_role",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/users?:search_field (name) Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5002/api/library/users?fname=test&lname=author",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"users"
+							],
+							"query": [
+								{
+									"key": "fname",
+									"value": "test"
+								},
+								{
+									"key": "lname",
+									"value": "author"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/users?:search_field (name)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5002/api/library/users?name=George",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"users"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "George"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/users?:search_field (email)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5002/api/library/users?email=george.vrinceanu@staff.tuiasi.ro",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"users"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "george.vrinceanu@staff.tuiasi.ro"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/users/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5002/api/library/users/34",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"users",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/users/:id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"last_name\":\"fara\",  \"email\": \"injurii@yahoo.com\"}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "localhost:5002/api/library/users/25",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"users",
+								"25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/users/:id?requested_role=1",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"telephone\": \"123123\", \"last_name\": \"pam pam test\"}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "localhost:5002/api/library/users/25?requested_role=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"users",
+								"25"
+							],
+							"query": [
+								{
+									"key": "requested_role",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/users/25",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"first_name\": \"ionel\", \"last_name\": \"gigel\", \"password\": \"fannr1\", \"email\":\"fannr1.geov\", \"telephone\": \"31231312\"}"
+						},
+						"url": {
+							"raw": "localhost:5002/api/library/users/73",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"users",
+								"73"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/users/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5002/api/library/users/48",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"users",
+								"48"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4523b39b-437d-43d0-930d-d715880aa8ee",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "1113482e-61ee-458a-8035-66a603b6d68d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "author requests",
+			"item": [
+				{
+					"name": "/api/library/books/myBooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5002/api/library/books/myBooks",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"books",
+								"myBooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/books/myBooks/:book_id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"testing\", \"genre\": \"Fiction\", \"year\": 1867}"
+						},
+						"url": {
+							"raw": "localhost:5002/api/library/books/myBooks/7",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"books",
+								"myBooks",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "editor requests",
+			"item": [
+				{
+					"name": "/api/library/books/requestEditBooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5002/api/library/books/requestEditBooks",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"books",
+								"requestEditBooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/books",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Test book\", \"author\": 10, \"genre\": \"SF\", \"year\": 1887}"
+						},
+						"url": {
+							"raw": "localhost:5002/api/library/books",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/books/:book_id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"author\": 10}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "localhost:5002/api/library/books/7",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"books",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/books/requestEditBooks/:book_id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"status\": \"approved\"}"
+						},
+						"url": {
+							"raw": "localhost:5002/api/library/books/requestEditBooks/7",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"books",
+								"requestEditBooks",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/books/:book_id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5002/api/library/books/10",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"books",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/library/books/<book_id>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5002/api/library/books/17",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"library",
+								"books",
+								"17"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "/api/library/books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5002/api/library/books",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"library",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/library/books?title=<book_title>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5002/api/library/books?title=Alchemist",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"library",
+						"books"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Alchemist"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/library/books?title=<book_genre>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5002/api/library/books?genre=Nove",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"library",
+						"books"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "Nove"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/library/books?year=<book_year>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5002/api/library/books?year=1958",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"library",
+						"books"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "1958"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/library/login(guest)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"teest\",\n    \"password\": \"test_pss\"\n}\n",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "localhost:5002/api/library/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"library",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

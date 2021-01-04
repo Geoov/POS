@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "5faebfe81fd8535dd5173462"
+  },
+  "id": 9,
+  "favourite_books": [
+    3,
+    4
+  ],
+  "wishlist": [
+    4,
+    6
+  ]
+}]

@@ -1,3 +1,1 @@
 # POS
-
-Laboratoare de POS

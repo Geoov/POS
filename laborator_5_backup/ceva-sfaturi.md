@@ -1,4 +1,4 @@
-Nu mai stiu daca e complet ca asta e dintr-o arhiva de backup
+Nu stiu daca e complet pentru ca l-am rescris la lab 8-9. Asta e dintr-o arhiva de backup
 
 Atentie la linkuri sa fie cele care trebuie:
 

@@ -20,6 +20,8 @@ nu cred ca trebuie neaparat
 Cache-Control: no-cache
 
 
+Multe clase nu-si au rostul, deci nu cred ca are rost sa le mai scrieti. Am incercat sa fac prostia aia de env-fault..
+
 
 Primul pas ar trebuie sa fie sa creati elementele din xsd. (La mine se cheama login.xsd)
 
